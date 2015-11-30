@@ -9,7 +9,7 @@ addpath('./util');
 % vl_setup
  
 addpath(('./rstEval'));
-addpath(['./trackers/VIVID_Tracker'])
+% addpath(['./trackers/VIVID_Tracker'])
 
 seqs=configSeqs;
 
@@ -19,7 +19,7 @@ shiftTypeSet = {'left','right','up','down','topLeft','topRight','bottomLeft','bo
 
 evalType='TRE'; %'OPE','SRE','TRE'
 
-diary(['./tmp/' evalType '.txt']);
+diary(['/tmp/' evalType '.txt']);
 
 numSeq=length(seqs);
 numTrk=length(trackers);
@@ -30,7 +30,7 @@ if ~exist(finalPath,'dir')
     mkdir(finalPath);
 end
 
-tmpRes_path = ['./tmp/' evalType '/'];
+tmpRes_path = ['/tmp/' evalType '/'];
 bSaveImage=0;
 
 if ~exist(tmpRes_path,'dir')

@@ -33,4 +33,7 @@ trackersEXE={ struct('name','CPF','namePaper','CPF'),...
     struct('name','VTD','namePaper','VTD'),...
     struct('name','CXT','namePaper','CXT')};
 
-trackers = [trackersVIVID,trackers1,trackersEXE];
+myTrackers = { struct('name','mean','namePaper','mean') };
+
+trackers = [myTrackers];
+% trackers = [trackersVIVID,trackers1,trackersEXE];
