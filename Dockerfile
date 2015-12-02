@@ -14,6 +14,10 @@ RUN echo "pkg install -forge -auto image" | octave
 RUN echo "pkg install -forge -auto io" | octave
 RUN echo "pkg install -forge -auto statistics" | octave
 
+# Matlab would have to be mounted -v /usr/local/MATLAB:/usr/local/MATLAB
+RUN alias matlab="/usr/local/MATLAB/R2015b/bin/matlab -nojvm -nodisplay -nosplash"
+
 #Install Tracking Benchmark
 ADD . /tracking-benchmark
+WORKDIR /tracking-benchmark
 
